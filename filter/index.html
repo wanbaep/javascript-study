@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    
+    <style>
+    .button-set {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .search-btn,
+    .filter-btn {
+        padding: 5px 10px;
+        border: 1px solid #019fff;
+        border-radius: 0.25rem;
+        background-color: aqua;
+    }
+    .filter-btn {
+        margin-left: 5px;
+    }
+    .filter-btn:hover,
+    .search-btn:hover {
+        background-color: #c4cbde;
+        cursor: pointer;
+    }
+    .type-table {
+        width: 100%;
+        margin-top: 5px;
+    }
+    .table-header {
+        display: flex;
+    }
+    .header-column {
+        width:25%;
+        border: 1px solid #6e81b7;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        background-color: #c4cbde;
+    }
+    .table-row {
+        display: flex;
+    }
+    .body-column {
+        width: 25%;
+        border: 1px solid #d4c0c0;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .filter-btnset {
+        display: flex;
+    }
+    .filter-ok, .filter-cancel {
+        padding: 5px 10px;
+        border: 1px solid #6e81b7;
+        border-radius: 0.25rem;
+        background-color: #c4cbde;
+        cursor: pointer;
+    }
+    .filter-ok:hover, .filter-cancel:hover {
+        background-color: aqua;
+        cursor: pointer;
+    }
+    </style>
+
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div style="margin:40px;"></div>
+    <div class="button-set">
+        <input id="search" type="text" placeholder="search" autocomplete="off">
+        <!-- <div class="search-btn" id="search-btn">Search</div> -->
+        <div class="filter-btn">Filter</div>
+    </div>
+    <div class="type-table">
+        <div class="table-header">
+            <div class="header-column name-header">이름</div>
+            <div class="header-column age-header">나이</div>
+            <div class="header-column number-header">번호</div>
+            <div class="header-column blood-header">혈액형</div>
+        </div>
+        <div id="table-body">
+            <!-- <div class="table-row">
+                <div class="body-column name">이름</div>
+                <div class="body-column age">나이</div>
+                <div class="body-column number">번호</div>
+                <div class="body-column blood">혈액형</div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="filter-modal">
+        <div class="age-area row">
+            <div>나이</div>
+            <select id="age-select">
+
+            </select>
+        </div>
+        <div class="number-area row">
+            <div>번호</div>
+            <select id="number-select">
+                
+            </select>
+        </div>
+        <div class="blood-area row">
+            <div>혈액형</div>
+            <input type="radio" name="blood-filter" value="A">A
+            <input type="radio" name="blood-filter" value="AB">AB
+            <input type="radio" name="blood-filter" value="B">B
+            <input type="radio" name="blood-filter" value="O">O
+        </div>
+        <div class="filter-btnset">
+            <div class="filter-ok" id="filter-ok">확인</div>
+            <div class="filter-cancel" id="filter-cancel">취소</div>
+        </div>
+    </div>
+    
+</body>
+</html>
